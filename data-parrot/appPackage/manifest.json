@@ -1,0 +1,60 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "version": "1.0.0",
+    "id": "${{TEAMS_APP_ID}}",
+    "packageName": "com.dataparrot.insights",
+    "developer": {
+        "name": "Data Parrot",
+        "websiteUrl": "https://dataparrot.ai",
+        "privacyUrl": "https://m.dataparrot.ai/privacy-policy",
+        "termsOfUseUrl": "https://m.dataparrot.ai/terms-of-use"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "data-parrot-${{APP_NAME_SUFFIX}}",
+        "full": "Data Parrot"
+    },
+    "description": {
+        "short": "Your Dream CRM AI Analyst",
+        "full": "Meet Data Parrot, your ✨Dream AI CRM Analyst✨. \nSimply connect your CRM, and get proactive insights into your sales pipeline, deal quality, sales forecast, and more.\nData Parrot automatically sends you notifications so you never miss a critical update again. \n*Auto-Summarize Deal History*: Glanceable summaries of your deals\n*Deal Health*: AI generated analysis of deal health highlighting risk\n*Identify Key Trends*:  Reveals common trends happening across your deals so you can take action\n*Keep Deals Moving*: Spots stalled deals and their causes with proactive recommendations\n*Sales Pipeline Inspection*: Monitors pipeline trends highlighting exactly what changed\nData Parrot integrates with HubSpot, with other CRM platforms coming soon.\nStop spending hours per week scrolling through timeline history and building manual reports. \n*Let Data Parrot do the work for you.*"
+    },
+    "webApplicationInfo": {
+        "id": "${{TEAMS_APP_ID}}",
+        "resource": "api://botId-${{BOT_ID}}"
+    },
+    "authorization": {
+            "permissions": {
+                "resourceSpecific": [
+                    {
+                        "name": "ChannelMessage.Read.Group",
+                        "type": "Application"
+                    }
+                ]
+            }
+        },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "${{BOT_ID}}",
+            "scopes": [
+                "personal",
+                "team",
+                "groupchat"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": true
+        }
+    ],
+    "composeExtensions": [],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+}
